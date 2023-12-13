@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://kit.fontawesome.com/2ee0245f3d.js' crossorigin='anonymous'></script>
+   <!-- Link hacia Animate CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <!-- Link hacia JQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <!-- Fancybox -->
+   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="movil.css">
+   <link rel="stylesheet" href="import/responsiveslides.css">
+   <link rel="stylesheet" href="libreria_carrousel_js/carrousel.css">
+   <!-- Responsive Slides -->
+   <script src="js/responsiveslides.min.js"></script>
+  <title>Median</title>
+  <script> //Este es del slide
+    $(function () {
+      $("#slider").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <p id="anclaa"></p>
+  <br>
+  <header>
+    <section class="modal">
+      <section class="fondomodal" id="modal">
+        <div class="contenidomodal">
+          <div class="filtroModal">
+            <a href="#" id="cerrarbtn" class="cerrarbtn">
+              <i  class="marca fa-solid fa-x"></i>
+            </a>
+            <form class="formulario" action="" name="formulario1">
+              <h2>¡Escribe tus datos <br> y te contactaremos!!</h2>
+              <br>
+              <article class="secciones">
+                <figure class="seccion_logo">
+                  <img src="imagenes/logo.png" alt="">
+                </figure>
+                <div class="seccion1">
+                  <input class="tamaño" id="NombreCompleto" name="NombreCompleto"type="text" placeholder="Nombre Completo*">
+                  <input class="tamaño" id="CorreoElectronico" name="CorreoElectronico" type="text" placeholder="Correo Electronico*">
+                  <input class="tamaño" id="Celular" name="Celular" type="tel"  placeholder="Celular*" pattern="[0-9]{10}" maxlength="10">
+                  <input class="tamaño" type="text" placeholder="Estado">
+                  
+                  
+                  
+                  <input class="tamaño" type="text" placeholder="Ciudad">
+                  <input class="tamaño" type="text" placeholder="Localidad">
+                  <div class="btn">
+                    <input class="btn_rojo" type="button" value="Enviar" onClick="valida_formulario()">
+                  </div>
+                </div>
+              </article>
+              
+            </form>
+          </div>
+        </div>
+      </section>
+      </section>
+    <section class="contenedor_arriba ancho">
+
+      <div class="icon" id="iconomenu">
+        <i class="fas fa-bars fa"></i>
+      </div>
+      <figure class="logo">
+        <img class="imagen1" src="imagenes/logo.png" alt="">
+      </figure>
+      <article class="boton_contactanos_movil">
+        <a href="#" id="abrirbtn2"><i class="fa-solid fa-phone-volume"></i></a>
+      </article>
+      <article class="menu_desktop" >
+        <nav>
+          <a href="#">Home</a>
+          <a href="#video">¿Who?</a>
+          <a href="#stadistics">Our career</a>
+          <a href="#precios">Packages</a>
+          <a href="#staff">Team</a>
+          <a href="#comentarios">Coments</a>
+          <a href="#contact">Find us</a>
+        </nav>
+      </article>
+      <article class="boton_contactanos">
+        <a href="#" id="abrirbtn">Contactanos</a>
+      </article>
+      
+    </section>
+    <div class="cont_menu" id="menu">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#video">¿Who?</a>
+        <a href="#stadistics">Our Career</a>
+        <a href="#precios">Packages</a>
+        <a href="#staff">Team</a>
+        <a href="#comentarios">Coments</a>
+        <a href="#contact">Find us</a>
+      </nav>
+    </div>
+    
+  </header>
+  <section class="blog ancho" id="home">
+    
+    <!-- SECCION DEL SLIDE -->
+    <article class="callbacks_container">
+      <article class="sliderText">
+        <div class="header">
+          <h2>Online <br> Advertising</h2>
+        </div>
+        <div class="footer">
+            <div>
+              <p>Our team is ready to use all its experience to help you promote your products and services online.</p>
+            </div>
+        </div>
+      </article>
+      <!-- IMAGENES DEL SLIDE -->
+      <ul class="rslides" id="slider">
+        <li><img src="imagenes/oficina1.jpg" alt="#"></li>
+        <li><img src="/imagenes/oficina2.jpg" alt="#"></li>
+        <li><img src="/imagenes/oficina3.jpg" alt="#"></li>
+      </ul>
+    </article>
+    <br><br><br>
+  </section>
+  <section id="video" class="video ancho">
+    <div class="encabezado">
+      <h2>¿Who we are?</h2>
+      
+    </div>
+    <iframe src="https://www.youtube.com/embed/qY9DbIWO57s?si=XdFZyVwRV-qRXJg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  </section>
+  <section id="stadistics" class="fondolaptop">
+    <div class="filtroParalax">
+      <div class="ancho contenidoparalax">
+        <article class="tarjeta wow  animate__animated animate__bounceInUp">
+          <h2><span>11</span><br> years in the industry</h2>
+        </article>
+        <article class="tarjeta wow  animate__animated animate__bounceInUp">
+          <h2><span>35</span><br> Partners worldwide</h2>
+        </article>
+        <article class="tarjeta wow  animate__animated animate__bounceInUp">
+          <h2><span>#1</span><br> Advertising agency</h2>
+        </article>
+        <article class="tarjeta wow  animate__animated animate__bounceInUp">
+          <h2><span>264</span><br>Successful projects</h2>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="precios" class="ancho precios">
+    <div class="encabezado">
+      <h2>Our Pricing</h2>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <br></br>
+    <div class="contenidoPrecios">
+      <article class="tarjetaprecio">
+        <i class="xd fa-regular fa-gem"></i>
+        <p class="plan">Project planning</p>
+        <br>
+        <h3 class="precioPlan">$200</h3>
+        <br>
+        <br>
+        <p class="precioPlan">We analyze the “money flow” of your business, your objectives, your current sales process, your offer and we design your digital plan so that you achieve your objectives to the millimeter. This is where we go from “this is impossible” to “we are going to achieve it together for sure.”</p>
+        <br></br>
+        <a href="#" class="BtnRojoModal">Purchase now</a>
+        <br></br><br>
+      </article>
+      <article class="tarjetaprecio">
+        <i class="xd2 fa-solid fa-share-from-square"></i>
+        <p class="plan2">Social Plan</p>
+        <br>
+        <h3 class="precioPlan2">$150</h3>
+        <br>
+        <br>
+        <p class="precioPlan2">We generate highly segmented advertising campaigns on Facebook, Instagram, Google, YouTube and Tiktok so that your potential client thinks: “Just what I was looking for! Where had you been hiding all this time? Take my money!"
+        </p>
+        <br></br>
+        <a href="#" class="BtnRojoModal2">Purchase now</a>
+        <br></br><br>
+      </article>
+      <article class="tarjetaprecio">
+        <i class="xd fa-solid fa-gem"></i>
+        <p class="plan">Project execution</p>
+        <br>
+        <h3 class="precioPlan">$2,000</h3>
+        <br>
+        <p>One Time Instalation</p>
+        <br>
+        <p class="precioPlan">We scale sales through high-conversion digital processes (we even create it from scratch if you don't have it) without compromising the ROI of your business and allowing you to reach billing limits that you previously thought impossible.</p>
+        <br></br>
+        <a href="#" class="BtnRojoModal">Purchase now</a>
+        <br></br><br>
+      </article>
+    </div>
+
+    <br></br>
+  </section>
+  <section id="staff" class="ancho team">
+    <div class="encabezado">
+      <h2>Our Team</h2>
+      
+    </div>
+
+    <br>
+    <div class="contenedorCarrusel">
+
+
+      <div class="flechas">
+        <a id="back-button">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <a id="forward-button">
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="ContenidoDer" id="carousel">
+        <div id="slide-container" class="contenedor_slide">
+          <!-- TARJETAS DEL CARROUSEL -->
+          <article class="slide" data-slideIndex="0">
+            <figure>
+                <img src="imagenes/persona1.jpeg" alt="">
+                <p class="nombre">Andrew Simon</p>
+                <p class="puesto">Founder</p>
+                <div class="redesTeam">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                  <i class="fa-brands fa-square-snapchat"></i>
+                </div>
+              
+            </figure>
+          </article>
+          <article class="slide" data-slideIndex="1">
+            <figure>
+              <img src="imagenes/persona2.jpeg" alt="">
+              <p class="nombre">Tim Abell</p>
+              <p class="puesto">CEO</p>
+              <div class="redesTeam">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-snapchat"></i>
+              </div>
+            </figure>
+          </article>
+          <article class="slide" data-slideIndex="2">
+            <figure>
+              <img src="imagenes/persona3.jpeg" alt="">
+              <p class="nombre">Tomas Jhonson</p>
+              <p class="puesto">Manager</p>
+              <div class="redesTeam">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-snapchat"></i>
+              </div>
+            </figure>
+          </article>
+          <article class="slide" data-slideIndex="3">
+            <figure>
+              <img src="imagenes/persona4.jpeg" alt="">
+              <p class="nombre">Tomas Jhonson</p>
+              <p class="puesto">Manager</p>
+              <div class="redesTeam">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-snapchat"></i>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+      </div>
+    </div>
+    <br></br>
+
+
+
+  </section>
+  <section id="comentarios" class="ancho gallery">
+    <br></br>
+    <div class="encabezado">
+      <h2>Our Clients</h2>
+      
+    </div>
+    <br></br>
+    <div class="ancho galleryContent">
+      <div class="galleryPictureContainer">
+        <a data-fancybox="gallery" data-src="/imagenes/galeria1.png" data-caption="Testimonio 1" class="content_large">
+          <img src="imagenes/galeria1.png" alt="Photo" class="img_large">
+          <!-- FILTRO -->
+          <div class="filtro2">
+            <h2>Testimonio 1</h2>
+            <br>
+            <p>View more</p>
+          </div>
+        </a>
+        <div class="part_down">
+          <a data-fancybox="gallery" data-src="/imagenes/galeria2.png" data-caption="Testimonio 2" >
+            <img src="imagenes/galeria2.png" alt="Photo">
+            <div class="filtro2">
+              <h2>Testimonio 2</h2>
+              <br>
+              <p>View more</p>
+            </div>
+          </a>
+          <a data-fancybox="gallery" data-src="/imagenes/galeria3.png" data-caption="Testimonio 3">
+            <img src="imagenes/galeria3.png" alt="Photo">
+            <div class="filtro2">
+              <h2>Testimonio 3</h2>
+              <br>
+              <p>View more</p>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="location ancho">
+    
+    <article class="map">
+      <div class="encabezado">
+        <h2>Locate us</h2>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7448.999990796848!2d-89.66661723765039!3d21.01267085399949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5674891d01315f%3A0xcb8ba96b39a6031c!2sInstituto%20Tecnol%C3%B3gico%20de%20M%C3%A9rida%2C%20Campus%20Poniente!5e0!3m2!1ses!2smx!4v1702474180188!5m2!1ses!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </article>
+      <section class="acordeon">
+        
+        <div class="acordeon_content">
+            <div class="dudas">
+                <h2>Basic info</h2>
+                <div class="cardContainer">
+                    <article class="tarjeta_acordeon">
+                        <div class="tarjeta_encabezado">
+                            <i class="fa-solid fa-square-plus  i"></i>
+                            <p>Email</p>
+                        </div>
+                        <div class="tarjeta_cuerpo">
+                          <p><i class="fa-solid fa-envelope"></i> ivan.yam@hotmail.com</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta_acordeon">
+                        <div class="tarjeta_encabezado">
+                            <i class="fa-solid fa-square-plus i"></i>
+                            <p>Phone</p>
+                        </div>
+                        <div class="tarjeta_cuerpo">
+                            <p><i class="fa-solid fa-phone"></i> 9871013371</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta_acordeon">
+                        <div class="tarjeta_encabezado">
+                            <i class="fa-solid fa-square-plus i"></i>
+                            <p>Address</p>
+                        </div>
+                        <div class="tarjeta_cuerpo">
+                            <p><i class="fa-solid fa-location-dot"></i> Perif. de Mérida Lic. Manuel Berzunza, Zona Dorada, 97302 Mérida, Yuc. </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+  </section>
+  <footer>
+    <figure>
+      <img src="imagenes/logo.png" alt="">
+    </figure>
+    
+    <a class="flechaArriba" href="#anclaa"><i class="fa-solid fa-arrow-up-long"></i></a>
+  </footer>
+  <script>
+    //funciones
+    //Función del modal
+  document.addEventListener("DOMContentLoaded", function () {
+    // Función del modal
+    var fondo = document.getElementById("modal");
+
+    $("#abrirbtn").click(function () {
+      fondo.style.display = "flex";
+    });
+
+    $("#cerrarbtn").click(function () {
+      fondo.style.display = "none";
+    });
+
+    window.onclick = function (event) {
+      if (event.target == fondo) {
+        fondo.style.display = "none";
+      }
+    };
+
+    // Mostrar el modal después de 15 segundos
+    //setTimeout(function () {
+    //  fondo.style.display = "flex";
+    //}, 15000); // 15000 milisegundos = 15 segundos
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    // Función del modal
+    var fondo = document.getElementById("modal");
+
+    $("#abrirbtn2").click(function () {
+      fondo.style.display = "flex";
+    });
+
+    $("#cerrarbtn").click(function () {
+      fondo.style.display = "none";
+    });
+
+    window.onclick = function (event) {
+      if (event.target == fondo) {
+        fondo.style.display = "none";
+      }
+    };
+
+    // Mostrar el modal después de 15 segundos
+    //setTimeout(function () {
+    //  fondo.style.display = "flex";
+    //}, 15000); // 15000 milisegundos = 15 segundos
+  });
+    // ESTE ES EL SCRIP DEL MNU DE MOVIL
+    $("#iconomenu").click
+    (function (){
+      $("#menu").slideToggle("slow");
+      var question = $(this);
+      var icono = question.children('i');
+      $(".icon i").not(icono).removeClass('fas fa-bars fa').addClass('fa-solid fa-xmark')
+      icono.toggleClass('fas fa-bars fa fa-solid fa-xmark');
+    });
+
+    //ESTE ES EL SCRIPT QUE TE SUBE HASTA EL INICIO DE LA PAGINA
+    $(".FlechaUp").click(function(){
+      $('html, body').animate({
+      scrollTop: 0
+      }, '300');
+  });
+  </script>
+  <script src="js/wow.min.js"></script>
+    <script> new WOW().init(); </script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+          // Your custom options
+      });
+      $(".tarjeta_acordeon .tarjeta_encabezado").click(function(){
+        var question = $(this);
+        var answer = question.next();
+        var icono = question.children('i');
+
+        // Cerrar las otras Cards
+        $(".tarjeta .tarjeta_cuerpo").not(answer).slideUp();
+        // Cambiar los demás iconos
+        $(".tarjeta .tarjeta_encabezado i").not(icono).removeClass('fa-square-minus').addClass('fa-square-plus');
+
+        // Toggle Respuesta e Iconos seleccionados
+        answer.slideToggle();
+        icono.toggleClass('fa-square-minus fa-square-plus');
+    });
+  </script>
+  <script>
+    function valida_formulario(){
+      if(document.getElementById("NombreCompleto").value.length == 0){
+        alert("Escribe tu nombre completo")
+        document.getElementById("NombreCompleto").focus();
+        return 0;
+      }
+      if(document.getElementById("CorreoElectronico").value.length == 0){
+        alert("Escribe tu correo electronico")
+        document.getElementById("CorreoElectronico").focus();
+        return 0;
+      }
+      if(document.getElementById("Celular").value.length == 0){
+        alert("Escribe tu numero de telefono")
+        document.getElementById("Celular").focus();
+        return 0;
+      }
+      document.formulario1.submit();
+    }
+  </script>
+  <script src="libreria_carrousel_js/carrousel.js"></script>
+</body>
+</html>
